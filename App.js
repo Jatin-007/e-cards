@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import MainScreen from './src/MainScreen';
 
 
 export default class App extends Component{
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.instructions}>all striped down</Text>
+        <MainScreen/>
       </View>
     );
   }
