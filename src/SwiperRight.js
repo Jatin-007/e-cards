@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, ScrollView} from 'react-native';
 // import fetch from 'fetch';
 
 class SwiperRight extends Component {
@@ -8,7 +8,7 @@ class SwiperRight extends Component {
         super(props);
 
         this.state = {
-            moviesData: undefined,
+            moviesData: null,
         };
     }
 
@@ -20,6 +20,7 @@ class SwiperRight extends Component {
                 this.setState({
                     moviesData: responseJson.movies
                 })
+                console.log(responseJson.movies)
             })
             .catch((error) =>{
                 console.error(error);
@@ -33,8 +34,18 @@ class SwiperRight extends Component {
                 <View style={styles.childContainer}>
                     {
                         moviesData &&
-
-                            <Text>WORKS</Text>    
+                            <ScrollView>
+                                {moviesData.map(item => {
+                                    console.log(item);
+                                    return (
+                                        <View>
+                                            <Text>{item.id}</Text>
+                                            <Text>{item.title}</Text>
+                                            <Text>{item.releaseYear}</Text>
+                                        </View>
+                                    )
+                                })}
+                            </ScrollView>
 
                     }
 
