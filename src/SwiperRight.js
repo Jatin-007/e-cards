@@ -2,10 +2,17 @@ import React, {Component} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 
 const styles = StyleSheet.create({
+
     container: {
+        flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        height: '85%',
+    },
+    childContainer: {
+        flex:1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        maxHeight: '85%',
         width: '80%',
         marginLeft: '5%',
         marginRight: '5%',
@@ -20,7 +27,9 @@ class SwiperRight extends Component {
     render(){
         return (
             <View style={styles.container}>
-                <Text>Will show the list of all scanned cards</Text>
+                <View style={styles.childContainer}>
+                    <Text>Will show the list of all scanned cards</Text>
+                </View>
             </View>
         );
     }

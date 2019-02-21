@@ -5,34 +5,38 @@ import {StyleSheet,Text,View} from 'react-native';
 import Swiper from 'react-native-swiper';
 import SwiperLeft from './SwiperLeft';
 import SwiperRight from './SwiperRight';
+import LinearGradient from 'react-native-linear-gradient';
   
-//   const styles = StyleSheet.create({
-//     wrapper: {
-//     },
-//     slide1: {
-//       flex: 1,
-//       justifyContent: 'center',
-//       alignItems: 'center',
-//       backgroundColor: '#9DD6EB',
-//     },
-//     slide2: {
-//       flex: 1,
-//       justifyContent: 'center',
-//       alignItems: 'center',
-//       backgroundColor: '#97CAE5',
-//     },
-//     slide3: {
-//       flex: 1,
-//       justifyContent: 'center',
-//       alignItems: 'center',
-//       backgroundColor: '#92BBD9',
-//     },
-//     text: {
-//       color: '#fff',
-//       fontSize: 30,
-//       fontWeight: 'bold',
-//     }
-//   })
+  const styles = StyleSheet.create({
+    wrapper: {
+    },
+    slide1: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#9DD6EB',
+    },
+    slide2: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#97CAE5',
+    },
+    slide3: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#92BBD9',
+    },
+    text: {
+      color: '#fff',
+      fontSize: 30,
+      fontWeight: 'bold',
+    },
+    gradientContainer: {
+        flex: 1,
+    }
+  })
   
 class MainScreen extends Component {
 
@@ -62,10 +66,14 @@ class MainScreen extends Component {
                 <View style={this.viewStyle()}>
                 <Text>HOME</Text>
                 </View>
-            </Swiper>        
-            <View style={this.viewStyle()}>
-                <SwiperRight/>
+            </Swiper>     
+
+            <View style={styles.gradientContainer}>
+                <LinearGradient colors={['#769EF5', '#FEE2FF']} style={styles.gradientContainer}>
+                    <SwiperRight/>
+                </LinearGradient>
             </View>
+
         </Swiper>
         )
     }
