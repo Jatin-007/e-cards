@@ -8,31 +8,31 @@ import SwiperRight from './SwiperRight';
 import LinearGradient from 'react-native-linear-gradient';
   
   const styles = StyleSheet.create({
-    wrapper: {
-    },
-    slide1: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#9DD6EB',
-    },
-    slide2: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#97CAE5',
-    },
-    slide3: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#92BBD9',
-    },
-    text: {
-      color: '#fff',
-      fontSize: 30,
-      fontWeight: 'bold',
-    },
+    // wrapper: {
+    // },
+    // slide1: {
+    //   flex: 1,
+    //   justifyContent: 'center',
+    //   alignItems: 'center',
+    //   backgroundColor: '#9DD6EB',
+    // },
+    // slide2: {
+    //   flex: 1,
+    //   justifyContent: 'center',
+    //   alignItems: 'center',
+    //   backgroundColor: '#97CAE5',
+    // },
+    // slide3: {
+    //   flex: 1,
+    //   justifyContent: 'center',
+    //   alignItems: 'center',
+    //   backgroundColor: '#92BBD9',
+    // },
+    // text: {
+    //   color: '#fff',
+    //   fontSize: 30,
+    //   fontWeight: 'bold',
+    // },
     gradientContainer: {
         flex: 1,
     }
@@ -69,7 +69,7 @@ class MainScreen extends Component {
             </Swiper>     
 
             <View style={styles.gradientContainer}>
-                <LinearGradient colors={['#769EF5', '#FEE2FF']} style={styles.gradientContainer}>
+                <LinearGradient colors={['#769EF5', '#31ceb4', '#FEE2FF', '#f44271']} style={styles.gradientContainer}>
                     <SwiperRight/>
                 </LinearGradient>
             </View>
