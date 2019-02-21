@@ -1,38 +1,40 @@
 import React, {Component} from 'react';
 import randomcolor from 'randomcolor';
-import {StyleSheet,Text,View} from 'react-native';
+import {
+    StyleSheet,
+    Text,
+    View
+  } from 'react-native';
   
-import Swiper from 'react-native-swiper';
-import SwiperLeft from './SwiperLeft';
-import SwiperRight from './SwiperRight';
+  import Swiper from 'react-native-swiper';
   
-//   const styles = StyleSheet.create({
-//     wrapper: {
-//     },
-//     slide1: {
-//       flex: 1,
-//       justifyContent: 'center',
-//       alignItems: 'center',
-//       backgroundColor: '#9DD6EB',
-//     },
-//     slide2: {
-//       flex: 1,
-//       justifyContent: 'center',
-//       alignItems: 'center',
-//       backgroundColor: '#97CAE5',
-//     },
-//     slide3: {
-//       flex: 1,
-//       justifyContent: 'center',
-//       alignItems: 'center',
-//       backgroundColor: '#92BBD9',
-//     },
-//     text: {
-//       color: '#fff',
-//       fontSize: 30,
-//       fontWeight: 'bold',
-//     }
-//   })
+  const styles = StyleSheet.create({
+    wrapper: {
+    },
+    slide1: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#9DD6EB',
+    },
+    slide2: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#97CAE5',
+    },
+    slide3: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#92BBD9',
+    },
+    text: {
+      color: '#fff',
+      fontSize: 30,
+      fontWeight: 'bold',
+    }
+  })
   
 class MainScreen extends Component {
 
@@ -52,7 +54,7 @@ class MainScreen extends Component {
             showsPagination={false}
             index={1}>
             <View style={this.viewStyle()}>
-                <SwiperLeft/>
+                <Text>LEFT</Text>
             </View>
             <Swiper
                 horizontal={false}
@@ -64,7 +66,7 @@ class MainScreen extends Component {
                 </View>
             </Swiper>        
             <View style={this.viewStyle()}>
-                <SwiperRight/>
+                <Text>RIGHT</Text>
             </View>
         </Swiper>
         )
