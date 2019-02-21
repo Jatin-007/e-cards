@@ -8,19 +8,18 @@ class SwiperRight extends Component {
         super(props);
 
         this.state = {
-            moviesData: null,
+            userData: null,
         };
     }
 
     componentDidMount(){
-        return fetch('https://facebook.github.io/react-native/movies.json')
+        return fetch('https://jsonplaceholder.typicode.com/users')
             .then((response) => response.json())
-            .then((responseJson) => {
+            .then((userData) => {
 
                 this.setState({
-                    moviesData: responseJson.movies
+                    userData,
                 })
-                console.log(responseJson.movies)
             })
             .catch((error) =>{
                 console.error(error);
@@ -28,20 +27,22 @@ class SwiperRight extends Component {
     }
 
     render(){
-        const {moviesData} = this.state;
+        const {userData} = this.state;
         return (
             <View style={styles.container}>
                 <View style={styles.childContainer}>
                     {
-                        moviesData &&
-                            <ScrollView>
-                                {moviesData.map(item => {
+                        userData &&
+                            <ScrollView style={{width: '100%'}}>
+                                {userData.map(item => {
                                     console.log(item);
                                     return (
-                                        <View>
+                                        <View style={{borderWidth: 2,
+                                            borderColor: 'black', margin: 2, borderRadius: 8, backgroundColor: 'white'}}>
                                             <Text>{item.id}</Text>
-                                            <Text>{item.title}</Text>
-                                            <Text>{item.releaseYear}</Text>
+                                            <Text>{item.name}</Text>
+                                            <Text>{item.email}</Text>
+                                            <Text>{item.company.name}</Text>
                                         </View>
                                     )
                                 })}
@@ -50,7 +51,7 @@ class SwiperRight extends Component {
                     }
 
                     {
-                        !moviesData &&
+                        !userData &&
 
                         <Text>Will show the list of all scanned cards</Text>
                     }
@@ -78,9 +79,9 @@ const styles = StyleSheet.create({
         width: '98%',
         marginLeft: '1%',
         marginRight: '1%',
-        borderWidth: 2,
-        borderColor: 'black',
-        backgroundColor: 'white',
-        borderRadius: 15,
+        // borderWidth: 2,
+        // borderColor: 'black',
+        // backgroundColor: 'white',
+        // borderRadius: 15,
     }
 });
