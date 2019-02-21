@@ -6,7 +6,7 @@ class SwiperRight extends Component {
     render(){
         return (
             <View>
-                <Text>Testing SwiperRight</Text>
+                <Text>Testing testing</Text>
             </View>
         );
     }

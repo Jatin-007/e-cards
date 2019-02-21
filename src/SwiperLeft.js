@@ -6,7 +6,7 @@ class SwiperLeft extends Component {
     render(){
         return (
             <View>
-                <Text>Testing swiper left</Text>
+                <Text>Testing SWIPE left</Text>
             </View>
         );
     }
