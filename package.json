@@ -10,7 +10,8 @@
     "randomcolor": "^0.5.4",
     "react": "16.6.3",
     "react-native": "0.58.4",
-    "react-native-swiper": "^1.5.14"
+    "react-native-swiper": "^1.5.14",
+    "react-navigation": "^3.3.0"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
