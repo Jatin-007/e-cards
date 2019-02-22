@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "firebase-tools": "^6.4.0",
     "randomcolor": "^0.5.4",
     "react": "16.6.3",
     "react-native": "0.58.4",
